@@ -7,7 +7,7 @@
     <arg name="z" default="0"/>
     <arg name="roll" default="0"/>
     <arg name="pitch" default="0"/>
-    <arg name="yaw" default="0"/>
+    <arg name="yaw" default="1.5707"/>
 
     <!-- Launch other relevant files-->
     <include file="$(find my_robot)/launch/robot_description.launch"/>
@@ -34,7 +34,7 @@
     />
 
     <!--launch rviz-->
-    <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find my_robot)/launch/config_world.rviz"/>
+    <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find my_robot)/launch/config_amcl.rviz"/>
 
 
 </launch>
