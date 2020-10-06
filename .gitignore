@@ -3,5 +3,7 @@ urdf/my_robot1.gazebo
 urdf/ball_joint.xacro
 launch/test_robot.launch
 launch/config.rviz
+launch/bag.launch
+maps/map.pgm
 .vscode
 .vscode
