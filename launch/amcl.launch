@@ -10,7 +10,8 @@
         <param name="base_frame_id" value="robot_footprint"/>
         <param name="global_frame_id" value="map"/>
         <param name="initial_pose_x" value="0"/>
-        <param name="initial_pose_y" value="0"/>
+        <param name="initial_pose_y" value="3"/>
+        <rosparam file="$(find my_robot)/config/amcl_2.yaml" command="load" />
     </node>
 
     <!-- Move Base -->
@@ -24,5 +25,5 @@
         <rosparam file="$(find my_robot)/config/global_costmap_params.yaml" command="load" />
         <rosparam file="$(find my_robot)/config/base_local_planner_params.yaml" command="load" />
 
-    </node>
+    </node> 
 </launch>

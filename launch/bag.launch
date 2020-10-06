@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <!-- Robot pose -->
+    <arg name="x" default="0"/>
+    <arg name="y" default="0"/>
+    <arg name="z" default="0"/>
+    <arg name="roll" default="0"/>
+    <arg name="pitch" default="0"/>
+    <arg name="yaw" default="1.5707"/>
+
+
+    <param name="/use_sim_time" value="true"/>
+    
+
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find my_robot)/urdf/my_robot.xacro'"/>
+
+    <!--launch rviz--> -->
+    <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find my_robot)/launch/config_amcl.rviz"/>
+
+    <arg name="map_file" default="$(find my_robot)/maps/Kishan_world.yaml"/>
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+    <!-- AMCL Node -->
+    <node name="amcl" pkg="amcl" type="amcl" output="screen">
+        <param name="odom_frame_id" value="odom"/>
+     <!--   <param name="odom_model_type" value="diff-corrected"/> -->
+        <param name="base_frame_id" value="robot_footprint"/>
+        <param name="global_frame_id" value="map"/>
+        <param name="initial_pose_x" value="0"/>
+        <param name="initial_pose_y" value="3"/>
+    </node>
+</launch>

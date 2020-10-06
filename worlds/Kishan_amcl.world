@@ -1649,6 +1649,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
+      <static>1</static>
     </model>
     <model name='cardboard_box_0'>
       <pose frame=''>-4.84005 -2.56675 0.15 0 -0 0</pose>
@@ -1706,6 +1707,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
+      <static>1</static>
     </model>
     <model name='cardboard_box_1'>
       <pose frame=''>1.01468 1.59266 0.15 0 -0 0</pose>
@@ -1763,6 +1765,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
+      <static>1</static>
     </model>
     <state world_name='default'>
       <sim_time>4 453000000</sim_time>
@@ -1962,6 +1965,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
+      <static>1</static>
     </model>
   </world>
 </sdf>
