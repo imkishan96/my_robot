@@ -43,3 +43,10 @@ on new third terminal launch teleop.launch
 source devel/setup.bash
 roslaunch my_robot teleop.launch
 ```
+use teleop terminal to move around for few seconds until rtabmap localize robot on the map.
+
+once robot has localized on the map in the rviz, select `Download map` under MapCloud it will load 3d map in the rviz, 
+**Note** if 3D map is not aligned with 2D map try Downloding map again by selecting `Download amp`.
+
+if everything was successful it should look similar to this image
+![GitHub Logo](img/rtabmap_localization.png)
