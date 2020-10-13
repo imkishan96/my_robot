@@ -13,7 +13,7 @@
     <include file="$(find my_robot)/launch/robot_description.launch"/>
 
     <!-- world File-->
-    <arg name="world_file" default="$(find my_robot)/worlds/Kishan_amcl.world"/>
+    <arg name="world_file" default="$(find my_robot)/worlds/Kishan_map_my_world.world"/>
 
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="use_sim_time" value="true"/>
@@ -35,11 +35,6 @@
 
     <!--launch rviz-->
     <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find my_robot)/launch/config_amcl.rviz"/>
-
-    <!--launch amcl.launch file-->
-    <include file="$(find my_robot)/launch/amcl.launch" />
-
-    <!--launch teleop_keyboard-->
-    <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop_twist_keyboard" />
+   
         
 </launch>
