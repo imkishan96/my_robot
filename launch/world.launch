@@ -34,7 +34,7 @@
     />
 
     <!--launch rviz-->
-    <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find my_robot)/launch/config_amcl.rviz"/>
+    <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find my_robot)/launch/config_localization.rviz"/>
    
         
 </launch>
